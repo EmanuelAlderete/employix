@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "employee",
-        "contact-info"
+        "contact-info",
+        "task"
     ]
 }
