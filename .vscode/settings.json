@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "employee",
         "contact-info",
-        "task"
+        "task",
+        "meeting"
     ]
 }
