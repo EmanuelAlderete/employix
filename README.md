@@ -20,9 +20,9 @@ Este é um projeto em desenvolvimento utilizando [NestJS](https://nestjs.com/), 
 
 1. Instale as dependências:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 2. Execute a aplicação:
 
