@@ -1,9 +1,9 @@
 ### GET Employee
-GET https://employix.onrender.com/employees/3
+GET http://localhost:3000/employees/3
 
 
 ### CREATE Employee
-POST https://employix.onrender.com/employees
+POST http://localhost:3000/employees
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### UPDATE Employee
-PATCH  https://employix.onrender.com/employees/3
+PATCH  http://localhost:3000/employees/3
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ### ASSIGN Manager
-PATCH  https://employix.onrender.com/employees/3/assign-manager
+PATCH  http://localhost:3000/employees/3/assign-manager
 Content-Type: application/json
 
 {
