@@ -24,6 +24,9 @@ export class EmployeesController {
     private readonly commandBus: CommandBus,
   ) {}
 
+   /**
+    * Cria uma nova entidade no sistema com nome, gerente e informações de contato.
+   */
   @Post()
   async create(@Body() dto: CreateEmployeeDto) {
     const command = plainToClass(CreateEmployeeCommand, dto);
@@ -35,6 +38,10 @@ export class EmployeesController {
     return this.queryBus.execute(query);
   }
 
+
+ /**
+    * Retorna os dados completos de uma entidade existente com base no ID informado.
+   */
   @Get(':id')
   async findOne(@Param('id') id: string) {
     const query = plainToClass(GetEmployeeQuery, { id: Number(id) });
@@ -45,6 +52,9 @@ export class EmployeesController {
     return employee;
   }
 
+  /**
+    * Atualiza os dados de uma entidade existente com base no ID informado.
+   */
   @Patch(':id')
   async update(@Param('id') id: string, @Body() dto: UpdateEmployeeDto) {
     const command = plainToClass(UpdateEmployeeCommand, {
@@ -60,6 +70,9 @@ export class EmployeesController {
     return this.queryBus.execute(query);
   }
 
+  /**
+    * Define um gerente para um funcionário existente com base no ID informado.
+   */
   @Patch(':id/assign-manager')
   async assignManager(@Param('id') id: string, @Body() dto: AssignManagerDto) {
     const command = plainToClass(AssignManagerCommand, {
